@@ -5,6 +5,7 @@ module org.example.sem7 {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens org.example.sem7 to javafx.fxml;
     exports org.example.sem7;
