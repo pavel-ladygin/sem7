@@ -47,15 +47,17 @@ public class Restaurant extends Application {
         add.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                String name = Name.getText();
-                String dish = comboBox.getValue();
-                String count1 = count.getText();
-                Order order = new Order(name, dish, count1);
-                list.add(order.toString());
+                if (comboBox.getValue() != null){
+                    String name = Name.getText();
+                    String dish = comboBox.getValue();
+                    String count1 = count.getText();
+                    Order order = new Order(name, dish, count1);
+                    list.add(order.toString());
 
-                Name.clear();
-                count.clear();
-                comboBox.setValue(null);
+                    Name.clear();
+                    count.clear();
+                    comboBox.setValue(null);
+                }
             }
         });
 
